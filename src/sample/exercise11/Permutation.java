@@ -2,7 +2,6 @@ package sample.exercise11;
 
 import java.util.Arrays;
 import java.util.Scanner;
-import java.util.stream.IntStream;
 
 public class Permutation {
     public static void main(String[] args) {
