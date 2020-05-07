@@ -3,4 +3,5 @@ module Section {
     requires javafx.fxml;
 
     opens sample.exercise19;
+    opens sample.exercise20;
 }
