@@ -7,9 +7,7 @@ public class DecimalToBinary {
 
     public static String dec2Bin(int value) {
         if (value == 0)
-            return "0";
-        if (value == 1)
-            return "1";
+            return "";
         return dec2Bin(value / 2) + (char) ('0' + value % 2);
     }
 }
