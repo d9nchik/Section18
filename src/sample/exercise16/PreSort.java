@@ -11,15 +11,26 @@ public class PreSort {
     }
 
     public static int pos(int[] a, int l, int r) {
-        if (l == r)
-            return l;
-        int pos = pos(a, l, r - 1);
-        if (a[r] > a[pos])
-            return pos;
-        int temp = a[pos];
-        a[pos] = a[r];
-        a[r] = a[pos + 1];
-        a[pos + 1] = temp;
-        return pos + 1;
+        int pos = change(a, l, r, a[l]);
+
+        int temp = a[l];
+        a[l] = a[pos];
+        a[pos] = temp;
+        return pos;
+    }
+
+    private static int change(int[] a, int l, int r, int value) {//Part of quick sort O(n)
+        if (r < l)
+            return r;
+        if (a[l] > value) {
+            if (a[r] < value) {
+                int temp = a[l];
+                a[l] = a[r];
+                a[r] = temp;
+                return change(a, l + 1, r, value);
+            } else
+                return change(a, l, r - 1, value);
+        } else
+            return change(a, l + 1, r, value);
     }
 }
