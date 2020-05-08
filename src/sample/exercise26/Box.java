@@ -6,9 +6,10 @@ import javafx.scene.shape.Line;
 import javafx.scene.shape.Rectangle;
 
 public class Box extends Pane {
-    Rectangle rectangle = new Rectangle(0, 0, 20, 20);
-    Line line1 = new Line(0, 0, 20, 20);
-    Line line2 = new Line(0, 20, 20, 0);
+    private static final int SIDE_SQUARE = 30;
+    private final Rectangle rectangle = new Rectangle(0, 0, SIDE_SQUARE, SIDE_SQUARE);
+    private final Line line1 = new Line(0, 0, SIDE_SQUARE, SIDE_SQUARE);
+    private final Line line2 = new Line(0, SIDE_SQUARE, SIDE_SQUARE, 0);
 
     public Box() {
         rectangle.setFill(Color.WHITE);
