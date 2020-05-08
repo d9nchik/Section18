@@ -27,6 +27,10 @@ public class Box extends Pane {
         line2.setStroke(null);
     }
 
+    public void clearPath() {
+        rectangle.setFill(Color.WHITE);
+    }
+
     public void showPath() {
         rectangle.setFill(Color.SANDYBROWN);
     }
@@ -46,7 +50,7 @@ public class Box extends Pane {
     }
 
     public boolean isMarked() {
-        return rectangle.getFill().equals(Color.SANDYBROWN) || line1.getFill() != null;
+        return rectangle.getFill().equals(Color.SANDYBROWN) || line1.getStroke() != null;
     }
 
     public boolean isPathPart() {
