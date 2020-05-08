@@ -82,8 +82,6 @@ public class KochSnowflake extends Application {
                 // Get the midpoint on each edge in the triangle
                 Point2D p3 = new Point2D((2 * p1.getX() + p2.getX()) / 3, (2 * p1.getY() + p2.getY()) / 3);
                 Point2D p4 = new Point2D((2 * p2.getX() + p1.getX()) / 3, (2 * p2.getY() + p1.getY()) / 3);
-                Line line1 = new Line(p1.getX(), p1.getY(), p3.getX(), p3.getY());
-                Line line2 = new Line(p2.getX(), p2.getY(), p4.getX(), p4.getY());
                 Line line3 = new Line(p1.getX(), p1.getY(), p4.getX(), p4.getY());
                 line3.setRotate(60);
                 Point2D p5 = line3.getLocalToSceneTransform().transform(p4);
