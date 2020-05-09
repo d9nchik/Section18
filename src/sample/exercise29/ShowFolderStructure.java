@@ -3,7 +3,7 @@ package sample.exercise29;
 import java.io.File;
 import java.util.Scanner;
 
-public class DirectorySize {
+public class ShowFolderStructure {
     public static void main(String[] args) {
         // Prompt the user to enter a directory or a file
         System.out.print("Enter a directory or a file: ");
